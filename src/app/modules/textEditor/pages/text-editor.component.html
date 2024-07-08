@@ -1,0 +1,22 @@
+<section class="w-full h-full p-12">
+
+    <div class=" flex flex-col gap-5 p-3 items-center">
+        <div>
+            <app-textreader (contenFile)="setContent($event)" ></app-textreader>
+        </div>
+        <div class="w-full  h-full flex gap-2 items-center justify-center">
+            <div>
+                <app-editor (content)="setContent($event)" [FileContent]="contentFile" ></app-editor>
+            </div>
+            <div>
+                :DNI_COLABORADOR
+                <app-tagsbox></app-tagsbox>
+            </div>
+        </div>
+        <div>
+            <button (click)="export()" class="border-2">Exportar DOCUMENTO</button>
+        </div>
+    </div>
+
+
+</section>
